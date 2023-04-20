@@ -3,7 +3,7 @@ import './App.css';
 import {useState} from 'react'
 function App() {
   const [input,setInput] = useState("");
-  const [isEqualTo,setIsEqualTo] = useState("");
+  const [isEqualTo,setIsEqualTo] = useState(0);
   const inputHandler = (e)=>{
     setInput(e.target.value);
   }
@@ -17,7 +17,7 @@ function App() {
     <div className="App">
       <center>
       <input type="text" onChange={inputHandler} value={input}/><br/>
-      <h3>Your Ans is : {isEqualTo}</h3>
+      <h3>Your Result is : {isEqualTo}</h3>
       <button onClick={()=>setInput(input+'1')}>1</button>
       <button onClick={()=>setInput(input+'2')}>2</button>
       <button onClick={()=>setInput(input+'3')}>3</button>
